@@ -128,11 +128,8 @@ export default function Login({ setUsername }) {
               </a>
             </p>
           </div>
-
         </form>
-
       </div>
-
       <Footer />
     </>
   )

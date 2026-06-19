@@ -1,0 +1,214 @@
+.unique-books-container {
+  padding: 24px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.unique-books-container h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.unique-books-container table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.unique-books-container th {
+  background-color: #1d4ed8;
+  color: white;
+  padding: 14px 12px;
+  text-align: left;
+  font-weight: 600;
+  border: none;
+}
+
+.unique-books-container td {
+  padding: 12px 12px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.unique-books-container tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.editing-row {
+  background-color: #fffacd !important;
+}
+
+.editing-row input[type="text"],
+.editing-row input[type="number"],
+.editing-row input[type="file"] {
+  padding: 8px 10px;
+  border: 1px solid #1d4ed8;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 180px;
+  font-family: inherit;
+}
+
+.editing-row input[type="file"] {
+  width: auto;
+  padding: 6px 8px;
+  margin-bottom: 8px;
+}
+
+.unique-books-container button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 6px;
+}
+
+.unique-books-container button:last-child {
+  margin-right: 0;
+}
+
+.unique-books-container td:has(button) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.unique-books-container button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.unique-books-container button[onclick*="startEdit"],
+.unique-books-container button:nth-child(1):not(:has(+ button[style*="Delete"])) {
+  background-color: #2563eb;
+  color: white;
+}
+
+.unique-books-container button[onclick*="startEdit"]:hover {
+  background-color: #1e40af;
+}
+
+.unique-books-container button[onclick*="deleteBook"],
+.unique-books-container button:nth-child(2):not(:has(+ button[style*="View"])) {
+  background-color: #ef4444;
+  color: white;
+}
+
+.unique-books-container button[onclick*="deleteBook"]:hover {
+  background-color: #dc2626;
+}
+
+.unique-books-container button[onclick*="navigate"],
+.unique-books-container button:nth-child(3) {
+  background-color: #10b981;
+  color: white;
+}
+
+.unique-books-container button[onclick*="navigate"]:hover {
+  background-color: #059669;
+}
+
+.arrow-btn {
+  padding: 6px 10px;
+  min-width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #10b981;
+  color: white;
+  font-weight: 700;
+}
+
+.arrow-btn:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+}
+
+.unique-books-container button:has(+ button[style*="Save"]),
+.unique-books-container button[onclick*="saveEdit"] {
+  background-color: #16a34a;
+  color: white;
+}
+
+.unique-books-container button[onclick*="saveEdit"]:hover {
+  background-color: #15803d;
+}
+
+.unique-books-container button[onclick*="cancelEdit"] {
+  background-color: #6b7280;
+  color: white;
+}
+
+.unique-books-container button[onclick*="cancelEdit"]:hover {
+  background-color: #4b5563;
+}
+
+.unique-books-container img {
+  border-radius: 4px;
+  border: 1px solid #e0e0e0;
+}
+
+@media (max-width: 1024px) {
+  .unique-books-container {
+    padding: 16px;
+  }
+
+  .unique-books-container table {
+    font-size: 13px;
+  }
+
+  .unique-books-container td {
+    padding: 10px 8px;
+  }
+
+  .unique-books-container th {
+    padding: 12px 8px;
+  }
+
+  .unique-books-container button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+.pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.page-info {
+  color: #333;
+  font-weight: 600;
+}
+
+.page-buttons button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: white;
+}
+
+.page-buttons button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-size-select {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+

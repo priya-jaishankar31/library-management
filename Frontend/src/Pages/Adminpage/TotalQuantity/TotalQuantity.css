@@ -1,0 +1,20 @@
+.total-quantity-container {
+  padding: 24px;
+}
+
+.total-quantity-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.total-quantity-container th,
+.total-quantity-container td {
+  padding: 12px 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.total-quantity-container th {
+  background-color: #1d4ed8;
+  color: white;
+}
