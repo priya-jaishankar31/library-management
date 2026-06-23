@@ -33,7 +33,12 @@ export default function TotalQuantity() {
       <Navbar />
 
       <div className="total-quantity-container">
-        <h1>Total Quantity Books</h1>
+        <div className="admin-page-header">
+          <button className="back-btn" onClick={() => navigate('/admin-home')}>
+            ← Back to Dashboard
+          </button>
+          <h1>Total Quantity Books</h1>
+        </div>
 
         <table>
           <thead>

@@ -88,7 +88,12 @@ export default function UniqueBooks() {
       <Navbar />
 
       <div className="unique-books-container">
-        <h1>Unique Books</h1>
+        <div className="admin-page-header">
+          <button className="back-btn" onClick={() => navigate('/admin-home')}>
+            ← Back to Dashboard
+          </button>
+          <h1>Unique Books</h1>
+        </div>
 
         <table>
           <thead>

@@ -4,6 +4,7 @@ import './Login.css'
 import Navbar from '../../Component/Navbar/Navbar'
 import Footer from '../../Component/Footer/Footer'
 import API from '../../Api/api'
+import loginLogo from '../../Assets/loginLogo.jpg'
 
 export default function Login({ setUsername }) {
 
@@ -80,57 +81,48 @@ export default function Login({ setUsername }) {
   }
 }
   return (
-    <>
-      <Navbar />
+  <>
+    <Navbar />
 
-      <div className="login-container">
+    <div
+      className="login-container">
+      <form className="login-form" onSubmit={handleLogin}>
+        <h1>Login</h1>
 
-        <form
-          className="login-form"
-          onSubmit={handleLogin}
-        >
+        <input
+          type="text"
+          placeholder="Enter Username or User ID"
+          value={UserId}
+          onChange={(e) => setUser(e.target.value)}
+        />
 
-          <h1>Login</h1>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          value={Password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-          <input
-            type="text"
-            placeholder="Enter Username or User ID"
-            value={UserId}
-            onChange={(e) =>
-              setUser(e.target.value)
-            }
-          />
+        <button type="submit">
+          Login
+        </button>
 
-          <input
-            type="password"
-            placeholder="Enter Password"
-            value={Password}
-            onChange={(e) =>
-              setPassword(e.target.value)
-            }
-          />
-
-          <button type="submit">
-            Login
-          </button>
-
-          {toastVisible && (
-            <div className="login-toast">
-              {error}
-            </div>
-          )}
-
-          <div>
-            <p>
-              New Registration?
-              <a href="/signup">
-                Register Here
-              </a>
-            </p>
+        {toastVisible && (
+          <div className="login-toast">
+            {error}
           </div>
-        </form>
-      </div>
-      <Footer />
-    </>
-  )
+        )}
+
+        <p>
+          New Registration?{" "}
+          <a href="/signup">
+            Register Here
+          </a>
+        </p>
+      </form>
+    </div>
+
+    <Footer />
+  </>
+);
 }

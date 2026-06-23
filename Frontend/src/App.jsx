@@ -16,6 +16,9 @@ import ReturnBooks from './Pages/Userpage/ReturnBooks/ReturnBooks'
 import Signup from './Pages/Signup/Signup'  
 import TotalQuantity from './Pages/Adminpage/TotalQuantity/TotalQuantity'
 import UniqueBooks from './Pages/Adminpage/UniqueBooks/UniqueBooks'
+import BorrowedBooksAdmin from './Pages/Adminpage/BorrowedBooks/BorrowedBooksAdmin'
+import AvailableBooksAdmin from './Pages/Adminpage/AvailableBooks/AvailableBooksAdmin'
+import AdminUsers from './Pages/Adminpage/Users/AdminUsers'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -78,6 +81,26 @@ function App() {
         <Route
           path="/admin/unique-books"
           element={<UniqueBooks />}
+        />
+
+        <Route
+          path="/admin/total-quantity"
+          element={<TotalQuantity />}
+        />
+
+        <Route
+          path="/admin/borrowed-books"
+          element={<BorrowedBooksAdmin />}
+        />
+
+        <Route
+          path="/admin/available-books"
+          element={<AvailableBooksAdmin />}
+        />
+
+        <Route
+          path="/admin/users"
+          element={<AdminUsers />}
         />
 
       </Routes>
